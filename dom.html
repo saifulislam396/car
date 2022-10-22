@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS</title>
+    <style>
+        .newcls{
+            color: aqua;
+        }
+        .addcls{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="do">
+        <h1 class="a">Lorem ipsum dolor sit amet consectetur. Maiores, dolorem?</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum vero atque quasi perferendis totam!</p>
+        <marquee class="marq"
+                 Scrollamount=7
+                 bgcolor="Cyan"
+                 direction="left"
+                 loop="2">
+            This is HTML marquee without JS
+        </marquee>
+    </div>
+
+</body>
+<script type="text/javascript">
+    document.querySelector('#do').style.backgroundColor ='red';
+    // document.querySelector('h1').style.color ='lightyellow';
+    // document.querySelector('h1').classList.add('addcls', 'remo','pemo');
+    // document.querySelector('h1').classList.remove('a')
+    // document.querySelector('p').className='newcls';
+
+    // document.querySelector('#do').onmouseenter=fun;
+    // function fun(){
+    //     document.querySelector('#do').style.color = 'blue'
+    // }
+
+    // document.querySelector('#do').addEventListener('click', fun2);
+    // function fun2(){
+    //     document.querySelector('p').style.color= "aqua";
+    // }
+
+    // document.getElementById('do').addEventListener('click', function(){
+    //     this.style.backgroundColor= 'black';
+    //     this.style.color='red';
+
+    // })
+
+    // let re =document.getElementById('do').addEventListener('mouseleave',abc);
+    // // document.getElementById('do').addEventListener('click',xyz);
+    
+    // function xyz(){
+    //     re.removeEventListener("mouseleave" , abc);
+    // }
+    // function abc(){
+    //     document.getElementById('do').style.background= "pink";
+    // }
+    // function
+    // 
+    
+
+
+
+    class car {
+    constructor(emoji, speed = 4){
+        this.emoji = emoji;
+        this.speed = speed;
+    }
+    addTopage (){
+        let marquee=
+        document.createElement('MARQUEE');
+        marquee.innerText = this.emoji;
+        marquee.scrollAmount= this.speed;
+        document.body.appendChild(marquee);
+    }
+}
+const automobile = new car('🚗🚗', 6);
+automobile.addTopage()
+const auto = new car('🛺🛺', 2);
+auto.addTopage()
+const truck = new car('=🚒🚒', 3);
+truck.addTopage()
+const tractor = new car('🚚🚚', 4);
+tractor.addTopage()
+const ambulance = new car('🚑🚑', 5);
+ambulance.addTopage();
+const giv = new car('🚙🚙', 7);
+giv.addTopage()
+</script>
+</html>
